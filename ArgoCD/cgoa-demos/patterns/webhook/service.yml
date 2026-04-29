@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: webhook-pattern-svc
+  namespace: patterns
+spec:
+  selector:
+    app: webhook-pattern
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

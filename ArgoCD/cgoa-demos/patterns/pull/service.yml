@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pull-pattern-svc
+  namespace: patterns
+spec:
+  selector:
+    app: pull-pattern
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
